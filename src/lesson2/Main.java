@@ -15,30 +15,24 @@ public class Main {
 
         MyArrayList<Integer> mal = new MyArrayList<>(10);
         fillArray(mal,numElements);
-        System.out.println(mal);
         Instant start = Instant.now();
         mal.selectionSort(Comparator.reverseOrder());
         Instant finish = Instant.now();
         System.out.println("SelectionSort, ms;" + Duration.between(start,finish).toMillis());
-        System.out.println(mal);
 
         mal = new MyArrayList<>();
         fillArray(mal,numElements);
-        System.out.println(mal);
         start = Instant.now();
         mal.insertionSort(Comparator.reverseOrder());
         finish = Instant.now();
         System.out.println("InsertionSort, ms;" + Duration.between(start,finish).toMillis());
-        System.out.println(mal);
 
         mal = new MyArrayList<>();
         fillArray(mal,numElements);
-        System.out.println(mal);
         start = Instant.now();
         mal.bubbleSort(Comparator.reverseOrder());
         finish = Instant.now();
         System.out.println("BubbleSort, ms;" + Duration.between(start,finish).toMillis());
-        System.out.println(mal);
 
     }
 
