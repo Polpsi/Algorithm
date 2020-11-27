@@ -2,15 +2,14 @@ package lesson2;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 
 public class Main {
 
     private static Random random = new Random();
-    private static int numElements = 50;
-    private static int bound = 1000;
+    private static int numElements = 1000000;
+    private static int bound = 100000;
 
     public static void main(String[] args) {
 
