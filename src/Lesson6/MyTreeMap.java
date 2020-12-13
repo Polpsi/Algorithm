@@ -19,6 +19,34 @@ public class MyTreeMap<Key extends Comparable<Key>, Value> {
         }
     }
 
+    public int height() {
+        return height(root);
+    }
+
+    private int height(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 0;
+        }
+
+        return Math.max(height(node.left), height(node.right)) + 1;
+    }
+
+    public boolean isBalance() {
+        return isBalance(root);
+    }
+
+    private boolean isBalance(Node node) {
+        if (node == null || (node.left == null && node.right == null)) {
+            return true;
+        }
+        return (Math.abs(height(node.left) - height(node.right)) <= 1
+                && isBalance(node.left) && isBalance(node.right));
+    }
+
+
     public int size() {
         return size(root);
     }
