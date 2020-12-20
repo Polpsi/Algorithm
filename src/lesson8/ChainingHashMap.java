@@ -60,6 +60,13 @@ public class ChainingHashMap<Key, Value> {
         size++;
     }
 
+    public void remove(Key key) {
+        checkKeyNotNull(key);
+        int i = hash(key);
+        st[i].remove();
+        size--;
+    }
+
     public Value get(Key key) {
         checkKeyNotNull(key);
         int i = hash(key);
